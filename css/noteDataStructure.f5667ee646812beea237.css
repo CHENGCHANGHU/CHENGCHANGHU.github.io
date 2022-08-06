@@ -1,6 +1,0 @@
-:root{--logoSize: 80px;--color-1: #32343d;--color-2: #fff;--color-3: #cfcfd1;--color-4: #797988}*{padding:0;margin:0;color:#343434;font-family:monospace}textarea:focus,input:focus{outline:none}.manuscript-logo-img{width:80px;width:var(--logoSize);-webkit-transform:rotateY(180deg);transform:rotateY(180deg);border:1px solid #343434;border-radius:50%;cursor:pointer}.manuscript-logo-text{text-decoration:underline;font-weight:bolder;-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out;cursor:pointer}.manuscript-logo-text:hover{color:#039162}
-
-.content-box{width:70vw;margin:16px auto}
-
-h1{padding:32px 0 16px 0}h2{padding:16px 0 8px 0}h3{padding:8px 0 8px 0}p{margin:8px 0 8px 0}.block-quotes{margin-left:var(--indent);margin-top:8px;margin-bottom:8px;padding:4px 16px;border-left:8px solid #ccc;background-color:#eee}table,th,td{border:1px solid #343434}table{border-collapse:collapse;border-spacing:0px;margin:8px 0 8px 0}tr:nth-child(1){background-color:#dedede;font-weight:700}th,td{padding:4px 8px}a{color:seagreen}
-
