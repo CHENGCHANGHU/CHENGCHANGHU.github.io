@@ -44,7 +44,7 @@ p {
 
 .block-quotes {
   margin-left: var(--indent);
-  // margin: 8px 0px;
+  /* margin: 8px 0px; */
   margin-top: 8px;
   margin-bottom: 8px;
   padding: 4px 16px;
@@ -212,6 +212,7 @@ code {
   box-sizing: border-box;
 }
 
+.textarea-header,
 .preview-header {
   display: flex;
   flex-flow: row nowrap;
