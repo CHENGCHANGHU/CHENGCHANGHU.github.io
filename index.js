@@ -10,6 +10,10 @@ function main() {
   });
 
   id('markdown-textarea').focus();
+  
+  id('copy-button').addEventListener('click', event => {
+    navigator.clipboard.writeText(id('markdown-preview').outerHTML);
+  });
 }
 
 function id (value) {
@@ -54,8 +58,11 @@ function createElement (option) {
 
 function transformInlineElement(lineText) {
   return lineText
+    .replace(/<(?!(\/?(p|pre|code|div|strong|em|table|thead|tbody|th|tr|td)))/g, '&lt;')
+    .replace(/(?<!(p|pre|code|div|strong|em|table|thead|tbody|th|tr|td))>/g, '&gt;')
     .replace(/^(.*)\*\*(.+)\*\*(.*)$/g, (match, $1, $2, $3) => `${$1}<strong>${$2}</strong>${$3}`)
     .replace(/^(.*)\*(.+)\*(.*)$/g, (match, $1, $2, $3) => `${$1}<i>${$2}</i>${$3}`)
+    .replace(/^(.*)`(.+)`(.*)$/g, (match, $1, $2, $3) => `${$1}<code>${$2}</code>${$3}`)
     .replace(/^([^\[]*)\[(.*)\]\((.*)\)(.*)$/g, (match, $1, $2, $3, $4) => `${$1}<a href="${$3}" target="_blank">${$2}</a>${$4}`);
 }
 
@@ -369,7 +376,7 @@ function transformer(mdText, option = {
     /**
      * horizontal-rule
      */
-    if (match = lineText.match(/^[\*-_]{3,}$/)) {
+    if (match = lineText.match(/^[\*\-_]{3,}$/)) {
       options.push({
         tag: 'hr',
       });
@@ -421,7 +428,60 @@ function transformer(mdText, option = {
      * \n
      */
     return { options, lastNodeType };
-  }, { options: [], lastNodeType: '', status: {}}).options;
+  }, { options: [
+    {
+      tag: 'style',
+      text: `
+        h1 {
+          padding: 32px 0 16px 0;
+        }
+        
+        h2 {
+          padding: 16px 0 8px 0;
+        }
+        
+        h3 {
+          padding: 8px 0 8px 0;
+        }
+        
+        p {
+          margin: 8px 0 8px 0;
+        }
+        
+        .block-quotes {
+          margin-left: var(--indent);
+          margin-top: 8px;
+          margin-bottom: 8px;
+          padding: 4px 16px;
+          border-left: 8px solid #ccc;
+          background-color: #eee;
+        }
+        
+        table, th, td {
+          border: 1px solid #343434;
+        }
+        
+        table {
+          border-collapse: collapse;
+          border-spacing: 0px;
+          margin: 8px 0 8px 0;
+        }
+        
+        tr:nth-child(1) {
+          background-color: #dedede;
+          font-weight: 700;
+        }
+        
+        th, td {
+          padding: 4px 8px;
+        }
+        
+        a {
+          color: seagreen;
+        }
+      `,
+    }
+  ], lastNodeType: '', status: {}}).options;
 
   // console.log(htmlNodeOptions);
 
