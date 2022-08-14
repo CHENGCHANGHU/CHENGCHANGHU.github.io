@@ -8,6 +8,8 @@ function main() {
     id('markdown-preview').append(...createElement(transformer(markdownText)));
     id('markdown-preview').scrollTop = previousScrollTop;
   });
+
+  id('markdown-textarea').focus();
 }
 
 function id (value) {
