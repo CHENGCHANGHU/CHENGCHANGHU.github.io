@@ -1,0 +1,5 @@
+:root{--logoSize: 80px;--color-0: #2a2c32;--color-1: #32343d;--color-2: #fff;--color-3: #cfcfd1;--color-4: #797988;--color-5: rgb(3, 145, 98)}*{padding:0;margin:0;color:#343434;font-family:monospace}textarea:focus,input:focus{outline:none}.manuscript-logo-img{width:80px;width:var(--logoSize);-webkit-transform:rotateY(180deg);transform:rotateY(180deg);border:1px solid #343434;border-radius:50%;cursor:pointer}.manuscript-logo-text{text-decoration:underline;font-weight:bolder;-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out;cursor:pointer}.manuscript-logo-text:hover{color:#039162}
+
+.content-box{width:70vw;margin:16px auto}
+
+

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmanuscript=self.webpackChunkmanuscript||[]).push([[98],{98:function(s,e,p){s.exports=p.p+"assets/images/tiger.62214923.jpg"}}]);
