@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmanuscript=self.webpackChunkmanuscript||[]).push([[357],{357:function(s,t,a){s.exports=a.p+"assets/images/shadow_straight.5430bf21.jpg"}}]);
