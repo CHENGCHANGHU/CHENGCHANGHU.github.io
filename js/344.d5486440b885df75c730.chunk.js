@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmanuscript=self.webpackChunkmanuscript||[]).push([[344],{344:function(s,e,a){s.exports=a.p+"assets/images/refraction.25948afd.jpg"}}]);

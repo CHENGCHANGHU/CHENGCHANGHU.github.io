@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmanuscript=self.webpackChunkmanuscript||[]).push([[534],{534:function(s,e,a){s.exports=a.p+"assets/images/gl1-triangle-assembly-01.51ea3c40.png"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmanuscript=self.webpackChunkmanuscript||[]).push([[953],{953:function(s,e,c){s.exports=c.p+"assets/images/shadow_source.2c7d0f0d.jpg"}}]);
