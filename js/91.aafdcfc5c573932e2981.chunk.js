@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmanuscript=self.webpackChunkmanuscript||[]).push([[91],{974:function(s,e,n){s.exports=n.p+"assets/images/nation-song-sheet-music.2e6c3df7.jpg"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmanuscript=self.webpackChunkmanuscript||[]).push([[555],{555:function(s,e,p){s.exports=p.p+"assets/images/octave.81177826.png"}}]);
